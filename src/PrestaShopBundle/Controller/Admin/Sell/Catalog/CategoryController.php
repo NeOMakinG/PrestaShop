@@ -102,6 +102,7 @@ class CategoryController extends FrameworkBundleAdminController
             'help_link' => $this->generateSidebarLink($request->attributes->get('_legacy_controller')),
             'enableSidebar' => true,
             'categoriesGrid' => $this->presentGrid($categoryGrid),
+            'categoriesGridJson' => $this->json($categoryGrid)->getContent(),
             'categoriesKpi' => $categoriesKpiFactory->build(),
             'layoutHeaderToolbarBtn' => $this->getCategoryToolbarButtons($request),
             'currentCategoryView' => $categoryViewData,

@@ -75,10 +75,6 @@
         {% endembed %}
 
         <div id="vue-grid"></div>
-
-        <script>
-          populateGrid({{ categoriesGrid|json_encode() }});
-        </script>
       </div>
     </div>
   {% endblock %}
@@ -89,4 +85,7 @@
 
   <script src="{{ asset('themes/default/js/bundle/pagination.js') }}"></script>
   <script src="{{ asset('themes/new-theme/public/category.bundle.js') }}"></script>
+  <script type="text/javascript">
+            populateGrid({{ categoriesGridJson|json_encode|raw }});
+        </script>
 {% endblock %}

@@ -35,9 +35,8 @@ export default {
     PSPagination
   },
   props: {
-    datas: {
-      type: Object.JSON,
-      default: {}
+    datas: function() {
+      return [];
     }
   },
   data: () => ({

@@ -52,16 +52,18 @@ import Serp from '@app/utils/serp/index';
 import Vue from 'vue';
 import VueGrid from '@components/vueGrids/Grid.vue';
 
-const populateGrid = datas => {
+const {$} = window;
+window.populateGrid = function populateGrid(datas) {
+  console.log(JSON.parse(datas));
   return new Vue({
     el: '#vue-grid',
-    template: '<grid :data="datas" />',
+    template: '<vue-grid :data="datas" />',
     components: {VueGrid},
-    data: () => datas
+    data: function() {
+      return {datas};
+    }
   });
 };
-
-const {$} = window;
 
 $(() => {
   const categoriesGrid = new Grid('category');
