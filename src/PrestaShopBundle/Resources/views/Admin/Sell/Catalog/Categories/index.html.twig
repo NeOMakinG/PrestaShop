@@ -73,6 +73,12 @@
             {% include '@PrestaShop/Admin/Sell/Catalog/Categories/Blocks/delete_categories_modal.html.twig' %}
           {% endblock %}
         {% endembed %}
+
+        <div id="vue-grid"></div>
+
+        <script>
+          populateGrid({{ categoriesGrid|json_encode() }});
+        </script>
       </div>
     </div>
   {% endblock %}
