@@ -106,7 +106,6 @@ module.exports = {
     filename: '[name].bundle.js',
     libraryTarget: 'window',
     library: '[name]',
-
     sourceMapFilename: '[name].[hash:8].map',
     chunkFilename: '[id].[hash:8].js'
   },
@@ -121,7 +120,8 @@ module.exports = {
       '@scss': path.resolve(__dirname, '../scss'),
       '@node_modules': path.resolve(__dirname, '../node_modules'),
       '@vue': path.resolve(__dirname, '../js/vue')
-    }
+    },
+    symlinks: false
   },
   module: {
     rules: [

@@ -10,29 +10,36 @@ const common = require('./common.js');
  */
 function prodConfig() {
   const prod = Object.assign(common, {
-    stats: 'minimal',
+    stats: {
+      builtAt: true
+    },
     optimization: {
+      splitChunks: {
+        chunks: 'async'
+      },
       minimizer: [
         new UglifyJsPlugin({
-          sourceMap: true,
+          sourceMap: false,
+          cache: true,
           uglifyOptions: {
+            ecma: 5,
             compress: {
-              drop_console: true,
+              drop_console: true
             },
             output: {
-              comments: keepLicense,
-            },
-          },
-        }),
-      ],
-    },
+              comments: keepLicense
+            }
+          }
+        })
+      ]
+    }
   });
 
   // Required for Vue production environment
   prod.plugins.push(
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   );
 
   return prod;
