@@ -479,7 +479,7 @@ class ProductLazyArray extends AbstractLazyArray
         }
 
         if ($show_out_of_stock) {
-            $flags['out_of_stock'] = [
+            $flags['out-of-stock'] = [
                 'type' => 'out-of-stock',
                 'label' => Configuration::get('PS_LABEL_OOS_PRODUCTS_BOD', $this->language->getId()),
             ];
