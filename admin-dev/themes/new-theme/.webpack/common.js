@@ -75,7 +75,8 @@ module.exports = {
     main: './js/theme.js',
     maintenance: './js/pages/maintenance',
     manufacturer: './js/pages/manufacturer',
-    manufacturer_address_form: './js/pages/manufacturer/manufacturer_address_form.js',
+    manufacturer_address_form:
+      './js/pages/manufacturer/manufacturer_address_form.js',
     merchandise_return: './js/pages/merchandise-return',
     meta: './js/pages/meta',
     module: './js/pages/module',
@@ -107,6 +108,7 @@ module.exports = {
     translations: './js/app/pages/translations',
     webservice: './js/pages/webservice',
     theme: './scss/theme.scss',
+    themeDark: './scss/theme-dark.scss',
     orders: './scss/pages/orders/orders.scss',
     product: './scss/pages/product/product_page.scss',
     product_catalog: './scss/pages/product/products_catalog.scss',

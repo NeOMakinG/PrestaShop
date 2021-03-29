@@ -3,11 +3,23 @@
 @import "~bootstrap/scss/functions";
 @import "~prestakit/scss/variables";
 
+// Dark theme
+$white: $gray-700;
+$black: $gray-100;
+$background-color: $gray-600;
+
+// cards
+$card-bg: $gray-800;
+$card-cap-bg: $gray-800;
+$card-border-color: $gray-900;
+
 // Colors
+$body-color: #fff;
+$text-muted: $gray-200;
 $gray-dark-text: #bebebe;
 $gray-dark-title: #bbcdd1;
 $gray-dark-hover: #282b30;
-$background-grey: #eaebec;
+$background-grey: $gray-900;
 $gray-dark-text-hover: $white;
 $gray-dark-divider: #eee;
 $color-separator: #dfdfdf;

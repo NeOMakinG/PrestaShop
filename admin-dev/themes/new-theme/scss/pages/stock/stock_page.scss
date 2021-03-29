@@ -1,6 +1,6 @@
 // Config
 /* stylelint-disable */
-@import "@scss/config/_settings";
+@import "@scss/config/_settings-dark";
 @import "@scss/config/_keyframes";
 @import "@scss/config/_bootstrap";
 /* stylelint-enable */
@@ -262,7 +262,6 @@
       .qty {
         padding-left: 20px;
       }
-
 
       @include media-breakpoint-down(sm) {
         display: flex;

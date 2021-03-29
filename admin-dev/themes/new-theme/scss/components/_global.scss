@@ -1,0 +1,90 @@
+// Main Layout
+body {
+  direction: ltr;
+  background: $background-grey;
+}
+
+// To put into the PrestaKit
+._fullspace {
+  width: 100%;
+  height: 100%;
+}
+
+.bordered {
+  > .panel {
+    border: 0;
+  }
+
+  > .nav-item > .nav-link {
+    &.active {
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+#product_filter_column_active .select2 {
+  min-width: 4.375rem;
+}
+
+// Needed to override the default inline style of typeahead and take all the width
+span.twitter-typeahead {
+  width: 100%;
+
+  input.tt-input {
+    width: 100%;
+  }
+}
+
+// text buttons
+.btn.btn-text {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+// setting dropdown button
+.dropdown-toggle.tool-button {
+  &::after {
+    font-size: 1.375rem;
+    color: $medium-gray;
+    content: "settings";
+  }
+}
+
+.translation-field {
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
+table.table {
+  font-size: 0.8rem;
+}
+
+// Needed to override the default inline style of modal header in translations-app
+.translations-app {
+  .modal-header {
+    display: initial;
+  }
+}
+
+.birthday-select-container {
+  .custom-select.form-control {
+    width: 100%;
+  }
+}
+
+/// Need this in order for material choice table select boxes to be aligned correctly
+.choice-table {
+  .table {
+    .form-check {
+      padding-left: 0;
+    }
+  }
+}
