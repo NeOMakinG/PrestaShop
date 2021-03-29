@@ -174,7 +174,7 @@ $order-block-background-color: #f8f8f8 !default;
     }
 
     &.employee-message {
-      background-color: #d3f1f7;
+      background-color: $primary-disabled;
     }
 
     &.employee-message--private {
