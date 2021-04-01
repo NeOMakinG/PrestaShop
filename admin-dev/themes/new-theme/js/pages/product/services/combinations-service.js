@@ -43,11 +43,76 @@ export default class CombinationsService {
    * @returns {Promise}
    */
   fetch(offset, limit) {
-    return $.get(this.router.generate('admin_products_combinations', {
-      productId: this.productId,
-      offset,
-      limit,
-    }));
+    return $.get(
+      this.router.generate('admin_products_combinations', {
+        productId: this.productId,
+        offset,
+        limit,
+      }),
+    );
+  }
+
+  /**
+   * @returns {Promise}
+   */
+  fetchAll() {
+    /* return $.get(
+      this.router.generate('admin_products_combinations_definitions', {
+        productId: this.productId
+      })
+    ); */
+    const dummyDatas = async () => [
+      {
+        id_combination: 1,
+        name: 'Color',
+        childs: [
+          {
+            id_combination: 2,
+            name: 'Red',
+            color: '#ff0000',
+            value: '#ff0000',
+          },
+          {
+            id_combination: 3,
+            name: 'Blue',
+            color: '#0000ff',
+            value: '#0000ff',
+          },
+          {
+            id_combination: 4,
+            name: 'Green',
+            color: '#008000',
+            value: '#008000',
+          },
+        ],
+      },
+      {
+        id_combination: 5,
+        name: 'Size',
+        childs: [
+          {
+            id_combination: 6,
+            name: 'S',
+            color: false,
+            value: 'S',
+          },
+          {
+            id_combination: 7,
+            name: 'M',
+            color: false,
+            value: 'M',
+          },
+          {
+            id_combination: 8,
+            name: 'XL',
+            color: false,
+            value: 'XL',
+          },
+        ],
+      },
+    ];
+
+    return dummyDatas();
   }
 
   /**
