@@ -34,7 +34,6 @@ import NavbarHandler from '@components/navbar-handler';
 import CombinationsManager from '@pages/product/edit/combinations-manager';
 import ProductTypeManager from '@pages/product/edit/product-type-manager';
 import initDropzone from '@pages/product/components/dropzone';
-import initCombinationModal from '@pages/product/components/combination-modal';
 
 const {$} = window;
 
@@ -90,7 +89,6 @@ $(() => {
   );
 
   initDropzone(ProductMap.dropzoneImagesContainer);
-  initCombinationModal('#combination-edit-modal');
 
   // From here we init component specific to edition
   const $productFormSubmitButton = $(ProductMap.productFormSubmitButton);
