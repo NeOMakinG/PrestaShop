@@ -7,10 +7,14 @@ interface Window {
 
 interface JQuery {
   tableDnD(params: unknown): void;
+  passy(params: unknown, length?: number): void;
+  serializeJSON: any;
 }
 
 interface JQueryStatic {
   tableDnD: TableDnD;
+  passy: any;
+  serializeJSON: any;
 }
 
 interface TableDnD {
@@ -24,6 +28,7 @@ interface AjaxError {
 
 interface AjaxResponse {
   message: string;
+  errors?: Record<string, string>;
 }
 
 interface PrestashopWindow {
@@ -33,4 +38,8 @@ interface PrestashopWindow {
 interface RegExpPositions extends RegExpExecArray {
   rowId: string;
   oldPosition: string;
+}
+
+interface SelectorsMap extends Record<string, string> {
+  [key: string]: string;
 }
