@@ -175,6 +175,8 @@ modules/*
 override/*
 themes/*/
 !themes/classic
+!themes/classic-v2
+themes/classic-v2/assets
 themes/classic/assets
 !themes/_core
 !themes/_libraries
