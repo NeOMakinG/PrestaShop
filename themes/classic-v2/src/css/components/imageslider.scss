@@ -1,6 +1,10 @@
 .carousel {
   margin-bottom: 1.5rem;
 
+  &-content {
+    width: 100%;
+  }
+
   .direction {
     z-index: auto;
   }
